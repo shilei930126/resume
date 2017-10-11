@@ -21,7 +21,62 @@ $(function(){
 			"background":"#4EB2D6"
 		})
 	})
+// 点击下滑到第二屏，向下滚动
+$(".sanjiao").click(function () {
+        $({dNum:0}).animate({dNum:750},{
+            duration:1000,
+            step: function () {
+                $(window).scrollTop(this.dNum);
+            }
+        })
+    });
 
 
+
+
+// 下拉
+// 顶部导航效果
+$("nav .nav li:eq(0)").click(function(){
+	$({num:$(window).scrollTop()}).animate({num:0},{
+		duration:1000,
+		step:function(){
+			$(window).scrollTop(this.num);
+			}
+		})
+	});
+$("nav .nav li:eq(1)").click(function(){
+	$({num:$(window).scrollTop()}).animate({num:750},{
+		duration:1000,
+		step:function(){
+			$(window).scrollTop(this.num);
+			}
+		})
+	});
+
+$("nav .nav li:eq(2)").click(function(){
+	$({num:$(window).scrollTop()}).animate({num:1440},{
+		duration:1000,
+		step:function(){
+			$(window).scrollTop(this.num);
+			}
+		})
+	});
+$("nav .nav li:eq(3)").click(function(){
+	$({num:$(window).scrollTop()}).animate({num:2100},{
+		duration:1000,
+		step:function(){
+			$(window).scrollTop(this.num);
+			}
+		})
+	});
+
+$("nav .nav li:eq(4)").click(function(){
+	$({num:$(window).scrollTop()}).animate({num:4000},{
+		duration:1000,
+		step:function(){
+			$(window).scrollTop(this.num);
+			}
+		})
+	});
 
 })
